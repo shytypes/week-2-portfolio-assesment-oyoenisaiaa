@@ -8,3 +8,948 @@
 /* the font-family 'JetBrains Mono', has been linked
  * and is available for your use
  * */
+
+/* All colors to be called */
+:root {
+  --blue: #6091ec; 
+  --white: #ffffff;
+  --pink: #9a1d74;
+  --bgc:#35363A;
+  --black: #000000;
+  --bgc-whitesmoke: whitesmoke;
+  --bgc-grey: #35363A;
+  --focus-ring: #6091ec;
+}
+
+/* Theme toggle styling */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  
+}
+
+#toggle-theme {
+  position: fixed;
+  top: 1rem; /* distance from top of screen */
+  right: 1rem; /* distance from right of screen */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  color: var(--white); /* default for dark mode */
+  z-index: 1000; /* to stay above other elements */
+}
+
+
+/* Adding a focus ring for accessibility */
+#toggle-theme:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus-ring);
+  border-radius: 4px;
+}
+
+.space-style {
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* The header styling */
+header {
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  /* height: 30vh; */
+  /* margin-bottom: 4px;
+  margin-top: 10px; */
+  flex: 3;
+  align-self: center;
+}
+
+/* All titles */
+.title {
+  font-size: 25px;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* The body styling */
+body {
+  background-color: var(--bgc);
+  color: var(--white);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 100vh; /* body takes up at least the full height of the page */
+}
+
+/* Profile container styling */
+#profile {
+  display: flex;
+  flex-wrap: wrap; /* Stack on small screens */
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Space between image and contact */
+  height: auto;
+  font-size: 15px;
+  /* margin: 2rem 0; */
+
+}
+
+/* Style for the profile container */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* .my-image {
+  width: 160px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  opacity: 1;
+
+  
+} */
+
+.profile-container:hover .my-image {
+  opacity: 0.3;
+}
+
+.profile-container:hover .fade-text {
+  opacity: 1;
+}
+
+.my-name {
+  background-color: var(--pink);
+  color: var(--white);
+  font-size: 14px;
+  padding: 10px 20px;
+  /* padding: 8px 16px; */
+  font-weight: bold;
+
+}
+
+.fade-text {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  left: 27%;
+  transform: translate(-50%, -50%);
+  /* -ms-transform: translate(-50%, -50%) */
+  text-align: center;
+}
+
+
+.image-wrapper {
+  width: 160px;
+  height: 200px;
+  position: relative;
+}
+
+.my-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  opacity: 1;
+}
+
+.image-fallback {
+  display: none; /* only shown if image fails */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 15px;
+  /* font-family: sans-serif; */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  line-height: 1.4;
+}
+
+.contact-container {
+  background-color: var(--bgc-whitesmoke);
+  color: var(--black);
+  padding: 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 15px;
+  height: fit-content;
+  margin-top: 15px;
+  margin-left: 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+}
+
+/* All anchor tags */
+a {
+  text-decoration: none;
+  color: var(--blue)
+
+}
+
+/* #summary { 
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  align-self: center;
+  font-size: 15px;
+  color: white;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+} */
+
+#summary { 
+  margin: 0;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+}
+
+
+main {
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem auto;
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* adding space between each section */
+}
+
+/* .main-span { 
+  white-space: nowrap;
+} */
+
+/* .main-span p {
+  text-align: left;
+  word-break: break-word;
+} */
+
+hr {
+  border-width: 0px;
+  border-radius: 25px;
+  height: 1.5px;
+  background-color: var(--white); /* visible on dark background */
+  margin-top: 1px;
+  margin-bottom: 1px;
+  /* width: 60%; */
+  /* margin: 1rem 0; */
+  /* margin auto left & right = centers it */
+  /* margin: 1rem auto;  */
+}
+
+#education {
+  margin-top: 0.25rem;
+}
+
+#experience-2 { /* put space between both experiences */
+  margin-top: 20px; 
+}
+
+#experience-3 { 
+  margin-top: 20px; 
+}
+
+#experience > div:nth-child(3) {
+  margin-bottom: 4px;
+}
+
+#hobbies-skills-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.hobbies-skills-child {
+  width: 30%;
+}
+
+/* Default uls: show bullets */
+ul {
+  /* margin-left: 4px; */ 
+  margin-left: 1rem; /* margin-left for left spacing the bullets */
+  padding: 0px;
+}
+
+li{
+  font-size: 15px;
+  margin: 0 0 0 20px;
+}
+
+/* Specific div: remove bullets and extra spacing */
+div.hobbies-skills-child ul{
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+
+}
+
+div.hobbies-skills-child li{
+  font-size: 15px;
+  margin: 0; /* to remove all extra spacing per emoji replacement */
+  padding-left: 0.5rem; /* padding-left adds internal spacing */
+  /* line-height: 1.5; */ /* line-height adds spacing between the bullets. I am happy with the default */
+}
+
+
+/*Styling for closing section - form and links*/
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sliding animation for the form */
+/* @keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} */
+
+/* Floating Contact Button */
+#contact-widget {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  /* right: 20px;
+  bottom: 100px; */
+  background: var(--white);
+  /* color: var(--bgc); */
+  padding: 15px;
+  border-radius: 50%;
+  border: 3px solid var(--blue);
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Floating Contact Menu */
+#contact-menu {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  background: var(--bgc-grey);
+  border: 1px solid var(--bgc-whitesmoke);
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  /* pointer-events: none; */
+  text-align: right;
+}
+
+#contact-menu a {
+  padding: 8px;
+  text-decoration: none;
+  color: var(--white);
+  border-bottom: 1px solid var(--bgc-whitesmoke);
+  border-radius: 8px;
+}
+#contact-menu a:hover {
+  background: var(--blue);
+}
+
+#contact-menu.show {
+  display: flex;
+}
+
+/* Connect With Me Section */
+.connect-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: var(--bgc-whitesmoke);
+  padding-bottom: 50px; /* Make space for footer */
+}
+
+
+/* Marquee styling */
+/* title without marquee */
+/* #connect-title{
+  color: black;
+  padding-bottom: 20px; 
+} */
+
+/* title with marquee */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  color: var(--black);
+  margin: 0 auto; /* center the marquee in its section */
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  height: 2.5em;
+  /* font-size: 20px;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace; */
+}
+
+.marquee h2 {
+  display: inline-block;
+  transform: translateX(100%); /* Start off to the right */
+  animation: scroll-left 10s linear infinite; 
+}
+
+.marquee h2:hover {
+  animation-play-state: paused; /* pause on hover */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Let's connect cards */
+.connect-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+.card {
+  background: #007BFF;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 140px;
+  font-size: 16px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card a {
+  color: white;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Form Container */
+.form-container {
+  margin-top: 50px;
+  padding: 30px;
+  background: rgb(186, 185, 185);
+  border-radius: 10px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: hidden; /* Hide form initially */
+  height: 0; /* Prevent form from taking up space */
+  overflow: hidden; /* Hide form content until it's revealed */
+  /* transition: all 0.3s ease-out;  */ /* Smooth transition */
+  position: relative; /* for positioning close button */
+  /* display: none;  */
+  /* slide-in animation */
+  /* animation: slideIn 0.5s ease-out forwards;  */
+}
+
+.form-container.show {
+  visibility: visible;
+  height: auto; /* Allow form to expand */
+  margin-bottom: 50px; /* Ensure space below form when it's revealed */
+}
+
+#form-title{
+  padding: 20px;
+  padding-bottom: 5px;
+  color: #000000;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-container input,
+.form-container textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container button {
+  padding: 10px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background: #0056b3;
+}
+
+/* DOM manipulation */
+#data-view{
+  white-space: pre-line; 
+  margin-top: 1em; 
+  color: blue; 
+  font-family: monospace;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+/* Form close button styling */
+#close-form {
+  position: absolute;
+  top: 10px; /* top margin to position it above the form */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Centering */
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 10; /* Ensure it's above other content */
+}
+
+#close-form:hover {
+  background-color: red;
+}
+
+.close-btn:focus {
+  outline: none; /* Remove focus outline */
+  
+}
+
+/* Close Icon (X) styling */ 
+/* .close-icon {
+  position: absolute;
+  top: 20px;
+  left: 50%; 
+  transform: translateX(-50%); 
+  font-size: 30px; 
+  color: red; 
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.close-icon:hover {
+  color: darkred; 
+}
+
+.close-icon:focus {
+  outline: none; 
+  
+} */
+
+
+
+/* Footer styling */
+.main-footer {
+  background: var(--white);
+  color: var(--black);
+  text-align: center;
+  padding: 20px;
+  /* position: absolute;  */ /* Always at the bottom */
+  position: relative; /* Ensure footer stays below content */
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  margin-top: 50px; /* Ensure space above footer */
+}
+
+/* Feedback/Page rating */
+.feedback-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.fa {
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.fa:hover {
+  color: #2563eb;
+}
+
+.fa.selected {
+  color: #2563eb;
+}
+
+.fa-thumbs-down.selected {
+  color: red;
+}
+
+.rate-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.feedback-msg {
+  margin-top: 5px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+
+/* li Movie-buff Sub-list styling */
+.sub-list {
+margin-top: 8px;
+margin-left: 16px;
+list-style-type: none;
+}
+
+.sub-list li a {
+color: var(--white);
+font-style: italic;
+text-decoration: none;
+font-weight: 500;
+cursor: pointer;
+}
+
+.sub-list li a:hover {
+text-decoration: underline;
+color: #2563eb;
+}
+
+/* Overlay background */
+#trailer-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.6); /* dark mode default */
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 9998;
+}
+
+/* Movie trailer popup styling */
+#trailer-frame-container {
+position: fixed;
+top: 10%;
+left: 50%;
+transform: translateX(-50%);
+background: white;
+padding: 20px;
+border: 2px solid var(--blue);
+border-radius: 8px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+z-index: 9999;
+}
+
+/* Movie trailer frame header for close button */
+#frame-header {
+display: flex;
+justify-content: flex-end;
+margin-bottom: 10px;
+}
+
+#frame-header button {
+background: var(--blue);
+color: white;
+border: none;
+padding: 5px 10px;
+cursor: pointer;
+border-radius: 4px;
+font-size: 14px;
+}
+
+#frame-header button:hover {
+background-color: #1e40af;
+}
+
+html, body {
+  height: 100%;
+}
+
+
+/* Light mode overrides */
+body.light-mode {
+  background-color: var(--bgc-whitesmoke);
+  color: var(--black);
+}
+
+body.light-mode hr {
+  background-color: var(--bgc); /*dark bgc used as hr in light mode */
+}
+
+body.light-mode .contact-container  {
+  background-color: var(--bgc);
+  color: var(--white);
+}
+
+body.light-mode #toggle-theme {
+  color: var(--black);
+}
+
+body.light-mode a {
+  color: var(--blue);
+}
+
+body:not(.light-mode) {
+  --focus-ring: var(--white);
+}
+
+body.light-mode .card a  {
+  color: white;
+}
+
+body.light-mode .feedback-container  {
+  color: var(--white);
+}
+
+body.light-mode #trailer-overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* softer dim for light mode */
+}
+
+body.light-mode .sub-list li a {
+  color: var(--black);
+}
+
+body.light-mode .sub-list li a:hover {
+  text-decoration: underline;
+  color: #2563eb;
+}
+
+body.light-mode .main-footer{
+  background-color: var(--bgc);
+  color: var(--white);
+}
+
+/* ===== RESPONSIVENESS ===== */
+
+/* For screens up to 640px (mobile phones) */
+@media screen and (max-width: 640px) {
+  header {
+    padding: 0 1rem;
+    margin: 1rem auto;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  #profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .profile-container,
+  .contact-container {
+    width: 90%;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .my-image {
+    width: 140px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .fade-text {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 8px 16px;
+    position: absolute;
+  }
+    
+  .my-name {
+    font-size: 12px;
+    padding: 6px 12px;
+    text-align: center;
+  }
+
+  main {
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  #hobbies-skills-parent {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .hobbies-skills-child {
+    width: 100%;
+    text-align: center;
+  }
+
+  .space-style {
+    padding: 0 1rem;
+  }
+
+  .main-span p, li {
+    font-size: 14px;
+    text-align: center; /* or left */
+    word-break: break-word;
+  }
+
+  #trailer-frame-container {
+    width: 90%; /* using most of the screen width */
+    padding: 12px;
+  }
+
+  #trailer-frame {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* maintaining YouTube video ratio */
+  }
+
+  #frame-header button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+/* For screens between 640px and 1024px (tablets) */
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  header {
+    padding: 0 2rem;
+    text-align: left;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  #profile {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  .profile-container, .contact-container {
+    /* text-align: center; */
+    width: 48%;
+  }
+    
+  .my-image {
+    width: 150px;
+    height: 190px;
+  }
+
+  .fade-text {
+    top: 20%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    padding: 10px 16px;
+  }
+
+  .my-name {
+    font-size: 13px;
+  }
+
+  main {
+    padding: 0 2rem;
+  }
+
+  #hobbies-skills-parent {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .hobbies-skills-child {
+    width: 48%;
+  }
+
+  .main-span p,
+  li {
+    font-size: 15px;
+  }
+}
+
+/* For larger screens (desktops) */
+@media screen and (min-width: 1025px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .my-name {
+    font-size: 14px;
+  }
+
+  .my-image {
+    width: 160px;
+    height: 200px;
+  }
+
+  .hobbies-skills-child {
+    width: 30%;
+  }
+
+}

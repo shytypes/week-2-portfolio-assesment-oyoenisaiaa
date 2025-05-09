@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>OA's Portfolio</title>
     <!-- add fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,13 +15,295 @@
     />
     <!-- local style -->
     <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <!-- Header Area -->
-    <header></header>
+    <header>
+      <div class="theme-toggle">
+        <button id="toggle-theme" aria-label="Toggle dark/light theme">🌙</button>
+      </div>
+
+      <!-- Profile section -->
+      <section id="profile" aria-label="Personal Profile">
+        <div class="profile-container">
+          <div><p class="title">OYOENISAI ANDREW-ESSIEN</p></div>
+          <div class="image-wrapper">
+            <img class="my-image" src="assets/images/Oyoenisai Andrew-Essien.png" alt="image of a confident professional lady in a pink blazer" 
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="image-fallback" aria-hidden="true">Image of a confident professional lady in a pink blazer</div>
+          </div>
+            
+            <div class="fade-text">
+              <div class="my-name">Oyoenisai (O-yo-ni-zai)</div>
+            </div>
+          </div>
+      
+          <div class="contact-container" aria-label="Contact Information">
+            <div class="my-email">
+              ✉️ Email: <a href="mailto:oyoenisaiaa@gmail.com" aria-label="Send an email to oyoenisaiaa@gmail.com">Click to send</a>
+            </div>
+
+            <div class="my-phone">
+              📞 Phone: +234 (0) 806-123-4567
+            </div>
+
+            <div class="my-linkedin">
+              🔗 LinkedIn: <a href="https://www.linkedin.com/in/oyoenisaiaa/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Visit Oyoenisai's LinkedIn profile">Click to connect</a>
+            </div>
+
+            <div class="my-bio">
+              📃 BIO: <a href="https://tinyurl.com/facilitator-BIO-oyoenisaia" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="See Oyoenisai's BIO">View BIO</a>
+            </div>
+          </div>
+      </section>
+    </header>
+
+
+
     <!-- Main Area -->
     <main>
-      <h1>My Amazing Portfolio</h1>
+      <section id="summary">
+        <p>
+          <span class="title">Summary</span><br>
+          Oyoenisai is a Developer who has created projects using Python, JavaScript, HTML, CSS, JavaScript, and frameworks such as 
+          Node, React, Tailwind, Bootstrap, etc. 
+          Oyoenisai's goal is to become a MERN developer but she is always open to learning about other frameworks and technologies.
+          In addition to software engineering, she brings over a decade experience in growth marketing,
+          data analysis, and product marketing. As a product owner, she is versed in project management and cross-team collaboration.
+        </p>
+      </section>
+
+      <section class="space-style" id="education">
+        <p class="title">Education</p>
+        <hr>
+        <span class="main-span">
+          <p>
+            B. Agric in Agricultural Economics & Extension | 
+            <time datetime="2025-03">3/2025</time> – <time datetime="2025-04">4/2025</time><br>
+            <a href="#">Top University</a> - Nigeria
+          </p>
+        </span>
+
+        <ul>
+          <li>Identified Animals</li>
+          <li>Leader on Agricultural projects</li>
+        </ul>
+      </section>
+
+      <section class="space-style" id="experience">
+        <p class="title">Experience</p>
+        <hr>
+        <div id="experience-1">
+          <span class="main-span">
+            <p>
+              <a href="https://www.womentechsters.org/" 
+              target="_blank" 
+              rel="noopener noreferrer">
+              Women Techsters</a> - Africa | Software Development - Trainee | 3/2025 – 4/2025
+            </p>
+          </span>
+  
+          <ul>
+            <li>Webpage portfolio</li>
+            <li>DOM Manipulation</li>
+            <li>Front-end Development</li>
+          </ul>
+        </div>
+
+        <div id="experience-2">
+          <span class="main-span">
+            <p>
+              <a href="https://africaagility.org/" 
+              target="_blank" 
+              rel="noopener noreferrer">
+              Africa Agility Foundation</a> | Full-stack Development - Trainee | 
+              <time datetime="2024-03">3/2024</time> – <time datetime="2025-04">4/2025</time>
+            </p>
+          </span>
+  
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Frameworks - React, Tailwind, Node, etc.</li>
+            <li>Python | Django Rest Framework</li>
+          </ul>
+        </div>
+
+        <div id="experience-3">
+          <span class="main-span">
+            <p>
+              <a href="https://www.ses.com" 
+              target="_blank" 
+              rel="noopener noreferrer">
+              SES Satellites</a> - Africa, MECA & NOAM | Senior Marketing Manager | 
+              <time datetime="2016-05">5/2016</time> – <time datetime="2023-06">6/2023</time>
+            </p>
+          </span>
+  
+          <ul>
+            <li>Growth & Product Marketing</li>
+            <li>Lead and Demand Generation</li>
+            <li>Database & Campaign Management</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="hobbies-skills-parent">
+        <div class="hobbies-skills-child">
+          <p class="title">Skills</p>
+          <hr>
+          <ul>
+            <li>🌐 HTML/CSS/JavaScript</li>
+            <li>🧑🏻‍💻 Python</li>
+            <li>📈 SQL</li>
+            <li>🐙 GitHub</li>
+            <li>📌 Project Management</li>
+          </ul>
+        </div>
+
+        <div class="hobbies-skills-child">
+          <p class="title">Hobbies</p>
+          <hr>
+          <ul>
+            <li>💻 Coding</li>
+            <li>📊 Research</li>
+            <li>🍕 Cooking</li>
+            <li>🎤 Singing</li>
+            <li onclick="toggleSubList()" style="cursor: pointer;">🎬 Movie Buff <span id="movie-arrow">▼</span>
+              <ul id="movie-sub-list" class="sub-list" style="display: none;">
+                <li><a href="#" onclick="openTrailer('https://www.youtube.com/embed/7mgu9mNZ8Hk?si=m53JqZ8I_eTk3496'); return false;">
+                🎞 Recently Watched Movie</a>
+                </li>
+              
+                <li><a href="#" onclick="openTrailer('https://www.youtube.com/embed/sEMRhtXA7Cg?si=453hZllzyXffPLpM'); return false;">
+                📺 Recently Watched Series</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Overlay + Trailer Player/Frame Popup -->
+            <div id="trailer-overlay" style="display: none;">
+              <div id="trailer-frame-container">
+                <div id="frame-header">
+                  <button onclick="closeTrailer()">✖ Close</button>
+                </div>
+                <iframe
+                  id="trailer-frame"
+                  width="560"
+                  height="315"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+        </div>
+      </section>
     </main>
+
+    <!-- Connect With Me Section -->
+    <section class="connect-section">
+      <div class="marquee title fade-in">
+        <h2 id="connect-title">Let's Stay Connected</h2>
+      </div>
+
+      <!-- Cards -->
+      <div class="connect-cards fade-in">
+        <div class="card">
+          🔗 <a href="http://tinyurl.com/eventdetails-oa" target="_blank">Events</a>
+        </div>
+        <div class="card">
+          📰 <a href="http://eepurl.com/iH6Uks" target="_blank">Newsletters</a>
+        </div>
+        <div class="card">
+          📝 <a href="https://oyoenisaiaa.hashnode.dev/" target="_blank">Hashnode Articles</a>
+        </div>
+        <div class="card">
+          📄 <a href="https://www.linkedin.com/newsletters/thoughts-and-views-7023043742831972352/" target="_blank">LinkedIn Articles</a>
+        </div>
+        <div class="card">
+          🔗 <a href="https://www.linkedin.com/in/oyoenisaiaa/" target="_blank">LinkedIn</a>
+        </div>
+
+        <div class="card">
+          🐦 <a href="https://twitter.com/oyoenisaiaa" target="_blank">X (Twitter)</a>
+        </div>
+        <div class="card">
+          💻 <a href="https://github.com/oyoenisaiaa" target="_blank">GitHub</a>
+        </div>
+        <div class="card">
+          📅 <a href="https://calendly.com/oyoenisaiaa/meetings" target="_blank">Coffee Chat</a>
+        </div>
+        <div class="card">
+          📧 <a href="mailto:oyoenisaiaa@gmail.com">Email</a>
+        </div>
+        <div class="card">
+          📩 <a href="#" onclick="showContactForm()">Contact Form</a> <!-- keep form hidden initially -->
+        </div>
+      </div>
+
+      <!-- Contact Form (hidden initially)-->
+      <div class="form-container fade-in" id="contact-form" style="display: none;">
+        <button id="close-form" class="close-btn" onclick="toggleForm()">Close</button>
+        <h3 id="form-title">Contact Me</h3>
+        <form>
+          <input type="text" name="firstName" placeholder="First Name" aria-label="First Name" required>
+          <input type="text" name="lastName" placeholder="Last Name" aria-label="Last Name" required>
+          <input type="email" name="email" placeholder="Email" aria-label="Email" required>
+          <input type="text" name="subject" placeholder="Subject" aria-label="Message Subject" required>
+          <textarea name="message" placeholder="Your Message" aria-label="Your Message" rows="4" required></textarea>
+          <button type="submit" id="submit-btn">Send Message</button>
+        </form>
+        
+        <!-- To display user's submitted data on DOM  -->
+        <section> 
+          <ul id="data-view"></ul>
+        </section>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <p>&copy; Oyoenisai Andrew-Essien. All rights reserved.</p>
+      
+      <!-- Feedback/Page rating Section on Footer -->
+      <div class="feedback-container">
+        <span>Rate this page:</span>
+        <i id="thumb-up-footer" class="fa fa-thumbs-up" onclick="setFeedback(this, 'like')"></i>
+        <i id="thumb-down-footer" class="fa fa-thumbs-down" onclick="setFeedback(this, 'dislike')"></i>
+        <span id="feedback-message-footer" style="margin-left: 10px;"></span>
+      </div>
+    </footer>
+
+
+    <!-- Floating Contact Button -->
+    <div class="fixed" id="contact-widget" onclick="toggleContactMenu()" tabindex="0" role="button" aria-label="Open contact menu">📫</div>
+    
+    <!-- Floating Contact Menu (hidden initially) -->
+    <div id="contact-menu">
+      <a href="mailto:oyoenisaiaa@gmail.com">📧 Email</a>
+      <a href="https://www.linkedin.com/in/oyoenisaiaa/" target="_blank">🔗 LinkedIn</a>
+      <a href="https://github.com/oyoenisaiaa" target="_blank">💻 GitHub</a>
+      <a href="http://eepurl.com/iH6Uks" target="_blank">📰 Newsletters</a>
+      <a href="https://calendly.com/oyoenisaiaa/meetings" target="_blank">☕ Coffee Chat</a>
+      <a href="#" onclick="showContactForm()">📝 Contact Me</a> <!-- keep form hidden initially -->
+
+      <!-- Feedback/Page rating in Float Menu -->
+      <!-- <div class="feedback-container" style="margin-top: 10px;">
+        <span style="font-size: 14px;">Rate this page:</span>
+        <i class="fa fa-thumbs-up" onclick="setFeedback(this, 'like')"></i>
+        <i class="fa fa-thumbs-down" onclick="setFeedback(this, 'dislike')"></i>
+        <span id="feedback-message-floating" style="margin-left: 10px;"></span>
+      </div> -->
+    </div>
+    
+    <script src="script.js"></script>
   </body>
 </html>
